@@ -1,0 +1,53 @@
+Instalando RaspbianOS
+http://labdegaragem.com/profiles/blogs/tutorial-raspberry-pi-instalando-o-raspbian-raspberry-pi-debian
+
+
+Instalando Programas no Rasp
+# Buscar aplicação: sudo apt-cache serach nome_programa
+
+
+Python
+Ele ja vem com Python 2.7.3
+
+Spyder, IDE de Desenvolvimento Python
+$ sudo apt-get install spyder -y
+
+PyQt4, Interface Qt, pode ja vir instalado
+$ sudo apt-get instaçç python-qt4 -y
+
+QWT, biblioteca de Widgtes
+$ sudo apt-get install python-qwt5-qt4 -y
+
+Picamera, biblioteca para o Modulo  Câmera do Rasp.
+$ sudo apt-get install python-picamera -y
+
+Se não Funcionar:
+	$ sudo apt-get install python-pip
+	$ sudo pip install picamera
+
+OpenCV, biblioteca para trabalhar com video.
+sudo apt-get install libopencv-dev python-opencv -y
+
+--
+UV4L, Para o OpenCV funcionar com o modulo camera é necessário instalar Driver UV4L 
+http://www.linux-projects.org/modules/sections/index.php?op=viewarticle&artid=14
+Para instalar UV4L abra um terminal e digite os seguintes comandos:
+	wget http://www.linux-projects.org/listing/uv4l_repo/lrkey.asc && sudo apt-key add ./lrkey.asc
+
+Adicione a seguinte linha ao arquivo / etc / apt / sources.list :
+	deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ wheezy main
+
+	$ sudo apt-get update
+	$ sudo apt-get install uv4l uv4l-raspicam
+Os dois últimos comandos irá atualizar UV4L para a versão mais recente, se ele já está instalado. Se você quer que o driver a ser carregado na inicialização, também instalar este pacote opcional:
+	$ sudo apt-get install uv4l-raspicam-extras
+
+Agora, o componente central UV4L eo motorista Video4Linux2 para a câmera Board CSI estão instalados. 
+Se você ocasionalmente se erros inesperados do motorista, considere atualizar o firmware com o seguinte comando:
+	$ sudo rpi-update #Somente Se não Funcionar
+--
+
+	
+MPlayer, Player de Video via Streaming
+$ sudo apt-get install mplayer -y
+

@@ -1,0 +1,15 @@
+COCKPIT
+gst-launch-1.0 -v udpsrc port=8888 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! h264parse ! omxh264dec ! autovideosink sync=false 
+
+
+CÂMERA
+raspivid -n -w 800 -h 600 -b 4500000 -fps 25  -hf -t 0 -o - | gst-launch-1.0 -v fdsrc !  h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=192.168.25.180 port=9000
+
+
+gst-launch \
+udpsrc port=8888 caps = "application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264, sprop-parameter-sets=(string)\"Z01AFeygbCPNLgIgAAADAC7msoAB4sWywA\\=\\=\\,aOvssg\\=\\=\", payload=(int)96, ssrc=(uint)861153369, clock-base=(uint)4026289255, seqnum-base=(uint)30449" ! \
+gstrtpbin ! \
+rtph264depay ! \
+queue ! \
+ffdec_h264 ! \
+autovideosink

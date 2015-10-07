@@ -1,0 +1,91 @@
+PAPER: 18
+TITLE: Sistema de Acompanhamento de Missão Para Uma Plataforma Experimental Em Robótica Subaquática
+AUTHORS: Marcos Vinicius Scholl and Carlos Rodrigues Rocha
+----------------------- REVIEW 1 ---------------------
+Como WSL espera que as submissões tenham formato de artigo,
+sugerimos que os autores adequem o texto, por exemplo,
+colocando "Introdução", organização do texto, etc.
+
+Como não há avaliação ainda, sugere-se que, se possível,
+sejam reportadas lições aprendidas, dificuldades encontradas, etc.
+
+----------------------- REVIEW 2 ---------------------
+ Embora a descrição do sistema seja importante para pesquisadores que
+estudam veículos subaquáticos, não vi como o artigo pode ser útil para
+o WSL. Observando os itens da chamada de trabalhos talvez o artigo se
+encaixe no item de hardware livre mas mesmo assim acho que a parte de
+software/hardware livre não é o foco do artigo da forma como ele está escrito.
+Ele parece muito mais um relatório de projeto do que um artigo.
+Detalhes básicos como a organização das seções torna a leitura do
+artigo difícil. Nem tem introdução ou trabalhos relacionados. Não há
+também nenhuma seção de experimentos preliminares mostrando o
+funcionamento do sistema. Da forma como o artigo está escrito ele
+parece mais um artigo que mostra um sistema resultado de um projeto
+maior que nada tem a ver com software livre. Os autores optaram por
+escrever tudo com software e hardware livre. Poderiam ter optado por
+não fazê-lo o que não geraria essa submissão. Assim eu considero que o
+artigo está fora do escopo do evento. A seguir apresento algumas
+críticas pontuais.
+
+. Há muitos termos técnicos que pessoas que não sejam especialistas no
+assunto não vão entender. Lembrando que o foco do evento é software
+livre e não veículos subaquáticos. A Figura 1 por exemplo que mostra
+fotos do UUV e do MMCS não ajuda muito o leitor a entender do que se
+tratam esses dois "módulos". Além disso no texto fala-se que a Figura 1
+mostra a "solução escolhida". Então os circuitos já existiam e os
+autores simplesmente montaram ele? Qual a contribuição então nesse
+caso para a comunidade de SL?
+
+. A partir da Seção 2 o artigo mostra-se uma descrição de um processo
+de engenharia de software. Algumas decisões de projeto são
+justificadas de modo a atender os requisitos do projeto (requisitos
+esses que não são listados por completo).
+
+. Ainda na Seção 2 há um excesso de siglas descrevendo "módulos",
+linguagens e bibliotecas usadas no projeto. Isso não ajuda o leitor a
+compreender o sistema. Mais uma vez, o artigo é muito mais voltado
+para um evento de veículos subaquáticos do que um evento de software
+livre.
+
+. No início da Seção 3 os autores escreveram: "apo´s um estudo de
+interfaces com usua´rios de vei´culos subaqua´ticos remotamente
+operados". Mas onde estão os detalhes desse estudo? Isso é muito
+importante já que os resultados do estudo fizeram vcs tomarem decisões
+de projeto importantes.
+
+. Na subseção 3.3 fala-se de algoritmos mas o leitor é redirecionado
+para uma referência externa. O certo era comentar o algoritmo no próprio
+artigo para mantê-lo auto contido.
+
+. Recomendo que o artigo seja resubmetido no futuro após o projeto ser
+finalizado. Sugiro que nesse novo artigo os autores foquem em analisar
+por exemplo quais soluções existem no mundo para implementação de
+hardware e software de veículos subaquáticos. Quantas dessas soluções
+são baseadas em SL? Se forem muitas, estudar a motivação para tal. Se
+forem poucas, estudar tb a motivação para tal e discutir medidas para
+inserir o SL de forma mais intensa nessa área de pesquisa. Análise de
+códigos em SL desses veículos também seria interessante. Pode-se
+utilizar métricas de código como as feitas pelos software Kalibro
+(http://ccsl.ime.usp.br/pt-br/kalibro) para avaliar estatísticas sobre
+esses códigos e buscar padrões nas implementações da comunidade que
+trabalha com veículos subaquáticos.  Estudos como esses são os
+esperados em um evento científico sobre software livre.
+
+. Há apenas dois artigos científicos nas referências. Isso precisa ser
+expandido.
+
+. Algumas observações não-críticas:
+
+- No título ponha "Para", "Uma" e "Em" começando com minúsculas
+
+. Algumas correções na escrita do texto:
+
+- A Seção 2.1 precisa ser reescrita. Frases desconexas e mudanças de
+  tempo verbal não permitem entender se está tudo pronto ou se algumas
+  partes do sistema ainda serão desenvolvidas.
+
+- A Seção 2.2 precisa ser revisada. Há erros de concordância como em
+  "Ele foi utilizado..." sendo que logo antes o Raspberry Pi foi
+  descrito no feminino como "Esta placa de comunicação..."
+
+- Página 5, último parágrafo: "atitude" -> "altitude"

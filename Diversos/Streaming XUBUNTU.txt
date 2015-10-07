@@ -1,0 +1,28 @@
+
+Comando Raspi:
+raspivid -t 999999 -h 600 -w 800 -fps 20 -hf -b 2000000 -o - | gst-launch-1.0 -v fdsrc ! h264parse !  rtph264pay config-interval=1 pt=96 ! gdppay ! tcpserversink host=192.168.25.180 port=5000 
+
+Comando Xubuntu:
+gst-launch-1.0 -v tcpclientsrc host= 192.168.25.180 port=5000  ! gdpdepay !  rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false 
+
+
+-------------------------------------------------
+Gstreamer using RTP/UDP
+raspivid -n -w 800 -h 600 -b 4500000 -fps 30 -hf -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=10.132.214.123 port=9000
+	
+gst-launch-1.0 -v udpsrc port=9000 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false
+
+
+-------------------------------------------------
+Gstreamer using RTP/TCP
+raspivid -n -w 800 -h 600 -b 4500000 -fps 30 -hf -t 0 -o - | gst-launch-1.0 -v fdsrc !  h264parse ! rtph264pay config-interval=10 pt=96 !  udpsink host=10.132.214.123 port=9000
+
+gst-launch-1.0 -v udpsrc port=9000 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' !  rtph264depay ! avdec_h264 ! videoconvert ! autovideosink sync=false
+
+
+
+Lixo:
+gst-launch-1.0 -v udpsrc port=9000 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! video/x-h264,width=640,height=480, framerate=30/1 ! h264parse ! omxh264dec ! autovideosink sync=false
+
+
+crtl alt f1

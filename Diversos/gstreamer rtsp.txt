@@ -1,0 +1,11 @@
+sudo apt-get install gstreamer-dbus-media-service gstreamer-tools gstreamer0.10-alsa gstreamer0.10-buzztard gstreamer0.10-buzztard-doc gstreamer0.10-doc gstreamer0.10-ffmpeg gstreamer0.10-ffmpeg-dbg gstreamer0.10-fluendo-mp3 gstreamer0.10-gconf gstreamer0.10-gnomevfs gstreamer0.10-gnonlin gstreamer0.10-gnonlin-dbg gstreamer0.10-gnonlin-doc gstreamer0.10-hplugins gstreamer0.10-nice gstreamer0.10-packagekit gstreamer0.10-plugins-bad gstreamer0.10-plugins-bad-doc gstreamer0.10-plugins-bad-multiverse gstreamer0.10-plugins-base gstreamer0.10-plugins-base-apps gstreamer0.10-plugins-base-dbg gstreamer0.10-plugins-base-doc gstreamer0.10-plugins-cutter gstreamer0.10-plugins-good gstreamer0.10-plugins-good-doc gstreamer0.10-plugins-ugly gstreamer0.10-plugins-ugly-doc gstreamer0.10-pocketsphinx gstreamer0.10-pulseaudio gstreamer0.10-qapt gstreamer0.10-tools gstreamer0.10-vaapi gstreamer0.10-vaapi-doc gstreamer0.10-x
+
+rtsp://192.168.25.180:8554/
+gst-launch-1.0 rtspsrc location=rtsp://192.168.25.180:8554 ! fakesink
+
+gst-launch-1.0 rtspsrc location=rtsp://192.168.25.180:8554 ! rtph264depay ! ffdec_h264 ! xvimagesink
+gst-launch udpsrc uri=udp://192.168.25.180:8554 caps="application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)MP4V-ES, profile-level-id=(string)1, config=(string)000001b001000001b58913000001000000012000c48d88007d0a041e1463000001b24c61766335322e3132332e30, payload=(int)96, ssrc=(uint)298758266, clock-base=(uint)3097828288, seqnum-base=(uint)63478" ! rtpmp4vdepay ! ffdec_mpeg4 ! autovideosink
+
+gst-launch videotestsrc ! ffenc_mpeg4 ! rtpmp4vpay send-config=true ! udpsink host=192.168.25.180  port=8554
+
+gst-launch-1.0 rtspsrc location=rtsp://192.168.25.180:8080/stream.sdp ! rtph264depay ! h264parse ! omxh264dec ! autovideosink

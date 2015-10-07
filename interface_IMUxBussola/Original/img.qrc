@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="img">
+    <file>imagenes/circle_grey.png</file>
+    <file>imagenes/circle_red.png</file>
+  </qresource>
+</RCC>

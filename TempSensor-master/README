@@ -1,0 +1,24 @@
+TempSensor
+----------
+
+This project includes a very simple Arduino sketch
+which reads the environment temperature using an LM35 sensor,
+smooths it and sends it over the XBee shield.
+
+Using monitor.py, a client computer with the other XBee connected
+can plot the temperature data transmitted by the Router AT
+wirelessly.
+
+You need:
+ - PyQt
+ - PyQwt
+ - PySerial
+
+Python modules for this to work correctly.
+
+Note that the serial port is hardcoded in SerialMonitor.py, change
+it to fit your needs.
+
+The Plotter application is a simplified/modified version of Eli Bendersky's
+plotter:
+    http://eli.thegreenplace.net/2009/08/07/a-live-data-monitor-with-python-pyqt-and-pyserial/

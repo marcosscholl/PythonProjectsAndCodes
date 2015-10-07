@@ -1,0 +1,12 @@
+Python Brasil. http://www.python.org.br/wiki/PyQt (Vários Links de ótimos tutorias de PyQt4)
+Aprenda Python. http://aprenda-python.blogspot.com.br/2009/05/livro-python-para-desenvolvedores.html (Dicas para aprender Python e link do Livro Base para a linguagem)
+Tutorial Pratico de PyQt. http://rra.etc.br/MyWorks/2009/07/13/pyqt-a-serie-licao-01/ (Ótima serie de Tutoriais, ensina tanto a criar a primeira tela, quando a conectar sinais a eventos)
+Python QT. http://augustocampos.net/revista-do-linux/030/programacao.html (Aprenda mais sobre a combinação de uma das mais poderosas linguagens com um dos melhores toolkits gráficos)
+PyQt4 tutorial. http://www.zetcode.com/gui/pyqt4/ (Tutorial legal para começar a estudar o PyQt)
+Rapid GUI Programming with Python and Qt (Mark Summerfield) . http://www.cs.washington.edu/research/projects/urbansim/books/pyqt-book.pdf (Livro Supremo de PyQt)
+Usando PyQt4. http://programeempython.blog.br/2013/02/usando-pyqt4-parte-3-usando-os-codigos.html (Tutorial bem Simples usando Qt Designer para criar uma calculadora de IMC)
+PyQt4 Reference Guide. http://pyqt.sourceforge.net/Docs/PyQt4/
+PyQt5 Reference Guide. http://pyqt.sourceforge.net/Docs/PyQt5/
+Qwt. http://qwt.sourceforge.net/ (Qt Widgets for Technical Applications, Usei este para criar um componente Bussola e Horizonte Artificial)
+
+Bom, acho que era isso. Tem muita coisa no Google, mas estes foram os que me foram mais úteis até o momento.

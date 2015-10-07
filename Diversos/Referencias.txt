@@ -1,0 +1,21 @@
+HUNTER, J. D. Matplotlib: A 2D graphics environment, in Computing in Science & Engineering, Vol. 9, No. 3. IEEE Computer Society. Maio 2007, pp 90-95. Disponível em <http://doi.ieeecomputersociety.org/10.1109/MCSE.2007.55>
+
+@Article{numpy,
+    author = {Travis E. Oliphant},
+    title = {Python for Scientific Computing},
+    journal ={Computing in Science and Engineering},
+    volume = {9},
+    number = {3},
+    issn = {1521-9615},
+    year = {2007},
+    pages = {10-20},
+    doi = {http://doi.ieeecomputersociety.org/10.1109/MCSE.2007.58},
+    publisher = {IEEE Computer Society},
+    address = {Los Alamitos, CA, USA},
+    note = "NumPy website: {http://numpy.scipy.org}"
+}
+
+Oliphant, T. E. NumPy: Python for Scientific Computing, in Computing in Science and Engineering, Vol. 9, No. 3. IEEE Computer Society. Maio 2007, pp 10-20. Disponível em <http://doi.ieeecomputersociety.org/10.1109/MCSE.2007.58> 
+
+
+Open Source Scientific Tools for Python

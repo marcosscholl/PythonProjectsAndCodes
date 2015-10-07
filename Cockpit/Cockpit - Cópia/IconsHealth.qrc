@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>conexao2.png</file>
+    <file>ferramentas2.png</file>
+    <file>camera2.png</file>
+    <file>posicao2.png</file>
+    <file>conexao.png</file>
+    <file>ferramentas.png</file>
+    <file>camera1.png</file>
+    <file>posicao.png</file>
+  </qresource>
+</RCC>
